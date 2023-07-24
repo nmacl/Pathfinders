@@ -60,4 +60,12 @@ function App() {
   );
 }
 
+function aSharp(example) {
+
+}
+
+function dijkstra(anything) {
+
+}
+
 export default App;
