@@ -13,7 +13,7 @@ function App() {
           <div className="space-y-8">
             <div className="flex flex-col">
               <h1 className="text-2xl text-red-500">Project 3 - Pathfinders</h1>
-              <p className="text-gray-300 mb-8">By: <span className="font-bold">Nolan MacLear, Khai Dao, and Ian Cook</span></p>
+              <p className="text-gray-300 mb-8">By: <span className="font-bold">Nolan MacLear, Khai Dao, and Hank Cook</span></p>
               <label htmlFor="origin" className="font-bold">
                 Origin:
               </label>
