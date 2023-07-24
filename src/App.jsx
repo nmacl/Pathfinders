@@ -42,6 +42,8 @@ function App() {
                 <option value="aStar">A*</option>
               </select>
 
+              <button onClick={handleClick} className="bg-green-500 text-white font-bold rounded p-2 mt-4"> Calculate Route </button>
+
               <div className="mt-8 text-2xl">
                 <p className="font-bold">Execution time: 46ms</p>
                 <p className="font-bold">Path length: 28</p>
@@ -58,6 +60,15 @@ function App() {
       </div>
     </>
   );
+}
+
+function handleClick() {
+  console.log("Clicked");
+  getOverpassData();
+}
+
+function getOverpassData() {
+  // Handle aSharp and dijkstra
 }
 
 function aSharp(example) {
