@@ -3,8 +3,8 @@ import osmnx as ox
 from flask import Flask, request, jsonify
 from time import time
 from networkx import NetworkXNoPath
-from dijkstra import dijkstra  # Import your custom Dijkstra's function
-from a_star import a_star  # Import your custom A* function
+from dijkstra import dijkstra 
+from a_star import a_star  
 from flask_cors import CORS
 
 
@@ -42,7 +42,7 @@ def shortest_path_dijkstra():
 
     try:
         time_start = time()
-        shortest_path_nodes = dijkstra(G, start_node, end_node)  # Use your custom Dijkstra's function
+        shortest_path_nodes = dijkstra(G, start_node, end_node)  
         if shortest_path_nodes is None:
             raise NetworkXNoPath
         execution_time = time() - time_start
