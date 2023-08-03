@@ -31,8 +31,6 @@ body {
   margin: 0;
   display: flex;
   place-content: center;
-  margin-top: 100px;
-  min-width: 320px;
   min-height: 100vh;
 }
 
