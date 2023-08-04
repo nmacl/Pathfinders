@@ -40,19 +40,34 @@ const App = () => {
   const centerCoordinates = [29.6516, -82.3248];
 
   return (
-
     <div className="App text-3xl">
+      <h1 className="text-red-500 text-4xl">
+        Pathfinders
+
+      </h1>
+      <h2 className="text-slate-400 m-4">
+        {
+        'By: Kevin Dao,'
+        + '\nNolan MacLear,'
+        + '\nand Ian Cook.'
+        }
+      </h2>
+      <h3 className="text-slate-500">
+        Purpose: Find the shortest path using Dijkstra's and A* algorithms.
+      </h3>
+      
       <form onSubmit={fetchRoute} className=" flex flex-col items-center">
-        <div className="w-3/4 m-16 p-16 bg-slate-800 space-y-4">
-          <label className="block">
+        <div className="w-3/4 m-16 p-16 bg-slate-800 space-y-4 shadow-2xl rounded-xl">
+          <p className="text-lg">Example: 'ΔΧ, 6, Fraternity Drive, Gainesville, Alachua County, Florida, 32603, United States'</p>
+          <label className="block hover:shadow-2xl">
             Start:
             <input type="text" onChange={(e) => setStart(e.target.value)} className="border border-gray-300 px-3 py-2 w-full" />
           </label>
-          <label className="block">
+          <label className="block hover:shadow-2xl">
             End:
             <input type="text" onChange={(e) => setEnd(e.target.value)} className="border border-gray-300 px-3 py-2 w-full" />
           </label>
-          <label className="block">
+          <label className="block hover:shadow-2xl">
             Algorithm:
             <select ref={algorithm} className="border border-gray-300 px-3 py-2 w-full">
               <option value="dijkstra">Dijkstra</option>
@@ -60,7 +75,7 @@ const App = () => {
             </select>
           </label>
         </div>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button type="submit" className="hover:shadow-2xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Calculate Route
         </button>
       </form>
@@ -78,9 +93,11 @@ const App = () => {
             </>
           )}
         </MapContainer>
-        <p>Execution time: {executionTime}</p>
-        <p>Path length: {pathLength}</p>
-        {error && <p>Error: {error}</p>}
+        <div className="border-emerald-400 hover:border-blue-500 border p-4 m-8">
+          <p>Execution time: {executionTime}</p>
+          <p>Path length: {pathLength}</p>
+          {error && <p>Error: {error}</p>}
+        </div>
       </div>
 
 
