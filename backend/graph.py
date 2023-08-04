@@ -71,7 +71,7 @@ def shortest_path_a_star():
 
     try:
         time_start = time()
-        shortest_path_nodes = a_star(G, start_node, end_node)  # Use your custom A* function
+        shortest_path_nodes = a_star(G, start_node, end_node) 
         if shortest_path_nodes is None:
             raise NetworkXNoPath
         execution_time = time() - time_start

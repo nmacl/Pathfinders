@@ -57,7 +57,7 @@ const App = () => {
       </h3>
       
       <form onSubmit={fetchRoute} className=" flex flex-col items-center">
-        <div className="w-3/4 m-16 p-16 bg-slate-800 space-y-4 shadow-2xl rounded-xl">
+        <div className="w-3/4 m-16 p-16 bg-slate-800 space-y-6 shadow-2xl rounded-xl">
           <p className="text-lg">Example: 'ΔΧ, 6, Fraternity Drive, Gainesville, Alachua County, Florida, 32603, United States'</p>
           <label className="block hover:shadow-2xl">
             Start:
@@ -80,7 +80,7 @@ const App = () => {
         </button>
       </form>
       <div className="m-16">
-      <MapContainer center={centerCoordinates} zoom={13} style={{ height: '400px', width: '100%' }}>
+      <MapContainer center={centerCoordinates} zoom={8} style={{ height: '500px', width: '100%' }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -93,7 +93,7 @@ const App = () => {
             </>
           )}
         </MapContainer>
-        <div className="border-emerald-400 hover:border-blue-500 border p-4 m-8">
+        <div className="border-emerald-300 hover:border-blue-400 border p-6 m-10">
           <p>Execution time: {executionTime}</p>
           <p>Path length: {pathLength}</p>
           {error && <p>Error: {error}</p>}
